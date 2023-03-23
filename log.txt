@@ -16,3 +16,15 @@ Timestamp: Thu Mar 23 2023 16:43:08 GMT+0100 (West Africa Standard Time)
 URL: /favicon.ico
 Timestamp: Thu Mar 23 2023 16:43:08 GMT+0100 (West Africa Standard Time)
 
+URL: /
+Timestamp: Thu Mar 23 2023 17:50:05 GMT+0100 (West Africa Standard Time)
+
+URL: /favicon.ico
+Timestamp: Thu Mar 23 2023 17:50:05 GMT+0100 (West Africa Standard Time)
+
+URL: /documentation
+Timestamp: Thu Mar 23 2023 17:50:16 GMT+0100 (West Africa Standard Time)
+
+URL: /favicon.ico
+Timestamp: Thu Mar 23 2023 17:50:17 GMT+0100 (West Africa Standard Time)
+
