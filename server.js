@@ -1,12 +1,15 @@
+//import the http module
 const http = require("http"),
     fs = require("fs"),
     url = require("url");
 
+//Create a request handler to handle requests and responses from web server
 http.createServer((request, response) => {
     let addr = request.url,
         q = url.parse(addr, true),
         filePath = "";
 
+    //use the fs module to log both the request URL  and a timestamp to the “log.txt” file
     fs.appendFile(
         "log.txt",
         "URL: " + addr + "\nTimestamp: " + new Date() + "\n\n",
@@ -34,5 +37,6 @@ http.createServer((request, response) => {
         response.write(data);
         response.end();
     });
+    //add port for server to listen for requests on port 8080
 }).listen(8080);
 console.log("My test server is running on Port 8080.");
