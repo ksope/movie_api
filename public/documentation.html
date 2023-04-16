@@ -36,20 +36,28 @@ about all the movies </tr>
 <tr><td>Get data on description, genre, director, image URL, whether it’s featured or not about a single movie by title to the user <td>/movies/[Title] <td>GET <td>None <td>A JSON object holding data about a single movie, containing a name, description, genre, director, image URLand whether it’s featured or not. </tr>
 <tr><td>Get data about genre (description) by name/title to the user <td>/movies/genre/[genreName] <td>GET <td>None <td>A JSON object holding data about a single movie, containing a genre property </tr>
 <tr><td>Get data about director by name to the user <td>/movies/directors/[directorName] <td>GET <td>None <td>A JSON object holding data about a single movie, containing a director property  </tr>
+<tr><td>Get a list of all users <td>/users <td>GET <td>None <td>	A JSON object holding data about all users  </tr>
+    tr><td>Get data on a user by username <td>/users/[Username] <td>GET <td>None <td>	A JSON object holding data on a user containing username, password, email, birthday and favorite movies  </tr>
 <tr><td>Add a new user<td>/users <td>POST <td>A JSON object holding data about the user to add, structured like:
 {
-name: "Kim",
+Username: "Kim",
+Password: "kim_012",
+Email: "kim@mail.com",
+Birthday: "2001-02-12",
 favoriteMovies: []
 } <td>A JSON object holding data about the user that was added, including an ID:
 {
-id: 1,
-name: "Kim",
+id: 145436546456,
+Username: "Kim",
+Password: "kim_012",
+Email: "kim@mail.com",
+Birthday: "2001-02-12",
 favoriteMovies: []
 } </tr>
-<tr><td>Update a user <td>/users/[id] <td>PUT <td>None <td>A text message indicating the user, name, and favorite movies that was updated </tr>
+<tr><td>Update a user <td>/users/[id] <td>PUT <td>None <td>A text message indicating data containing the username, password, email, birthday and favorite movies was updated </tr>
 <tr><td>Add a movie title to user's list of favorite movies <td>/users/[id]/[movieTitle] <td>POST <td>None <td>Show text that a movie has been added </tr>
-<tr><td>Remove a user by ID <td>/users/[id] <td>DELETE <td>None <td>A text message indicating whether the user was successfully removed </tr>
-<tr><td>Remove a favorite movie by user's ID <td>/users/[id]/[movieTitle] <td>DELETE <td>None <td>A text message indicating whether the movie was successfully removed from user's favorite movies</tr>
+<tr><td>Remove a user by ID <td>/users/[id] <td>DELETE <td>None <td>A text message indicating whether the user was successfully deleted </tr>
+<tr><td>Remove a favorite movie by user's ID <td>/users/[id]/[movieTitle] <td>DELETE <td>None <td>A text message indicating whether the movie was successfully deleted from user's favorite movies</tr>
 </tbody>
 
 
