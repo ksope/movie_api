@@ -12,7 +12,7 @@ const express = require("express"),
 
 mongoose.connect('mongodb://127.0.0.1:27017/myFlix', { useNewUrlParser: true, useUnifiedTopology: true });
 
-const cors = require(cors);
+const cors = require("cors");
 app.use(cors);
 
 app.use(bodyParser.json());
