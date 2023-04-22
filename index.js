@@ -114,6 +114,7 @@ app.get("/", passport.authenticate('jwt', { session: false }), (req, res) => {
   Birthday: Date
 }*/
 app.post('/users', passport.authenticate('jwt', { session: false }), (req, res) => {
+  let hashedPassword = Users.hashPassword(req.body.Password);
   Users.findOne({ Username: req.body.Username })
     .then((user) => {
       if (user) {
