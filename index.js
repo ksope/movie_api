@@ -4,7 +4,6 @@ const express = require("express"),
     mongoose = require("mongoose"),
     Models = require("./models.js");
 
-    const { check, validationResult } = require('express-validator');
     const app = express();
 
     const Movies = Models.Movie;
@@ -13,6 +12,8 @@ const express = require("express"),
 
 mongoose.connect('mongodb://127.0.0.1:27017/myFlix', { useNewUrlParser: true, useUnifiedTopology: true });
 
+const cors = require(cors);
+app.use(cors);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
