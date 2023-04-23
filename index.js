@@ -12,7 +12,8 @@ const express = require("express"),
     const Users = Models.User;
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/myFlix', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://127.0.0.1:27017/myFlix', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://ksope2002:sb5y5AKKG9BZer2o@skcluster.hgkgglg.mongodb.net/myFlix?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cors = require("cors");
 app.use(cors);
