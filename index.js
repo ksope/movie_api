@@ -12,7 +12,7 @@ const express = require("express"),
     const Users = Models.User;
 
 
-mongoose.connect('process.env.CONNECTION_URI', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cors = require("cors");
 app.use(cors);
