@@ -2,7 +2,6 @@ const express = require("express"),
     uuid = require("uuid"),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
-    bcrypt = require('bcrypt'),
     Models = require("./models.js");
 
 
