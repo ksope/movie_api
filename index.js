@@ -11,7 +11,7 @@ const express = require("express"),
     const Movies = Models.Movie;
     const Users = Models.User;
 
-
+//connect API to mongoose DB
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cors = require("cors");
