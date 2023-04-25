@@ -2,7 +2,9 @@ const express = require("express"),
     uuid = require("uuid"),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
+    bcrypt = require('bcrypt'),
     Models = require("./models.js");
+
 
     const { check, validationResult } = require('express-validator');
 
@@ -15,7 +17,7 @@ const express = require("express"),
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cors = require("cors");
-app.use(cors);
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -101,7 +103,7 @@ app.get("/movies/directors/:directorName", passport.authenticate('jwt', { sessio
     });
 });
 
-app.get("/", passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get("/", (req, res) => {
     res.send("Welcome to myFlix Movies!");
 });
 
