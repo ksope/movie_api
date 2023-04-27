@@ -5,7 +5,7 @@ const express = require("express"),
     Models = require("./models.js");
 
 
-    const { check, validationResult } = require('express-validator');
+ 
 
     const app = express();
 
@@ -25,7 +25,7 @@ let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
 
-
+   const { check, validationResult } = require('express-validator');
 
 
 // GET requests
