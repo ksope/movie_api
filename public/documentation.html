@@ -58,6 +58,14 @@ favoriteMovies: []
 <tr><td>Add a movie title to user's list of favorite movies <td>/users/[id]/[movieTitle] <td>POST <td>None <td>Show text that a movie has been added </tr>
 <tr><td>Remove a user by ID <td>/users/[id] <td>DELETE <td>None <td>A text message indicating whether the user was successfully deleted </tr>
 <tr><td>Remove a favorite movie by user's ID <td>/users/[id]/[movieTitle] <td>DELETE <td>None <td>A text message indicating whether the movie was successfully deleted from user's favorite movies</tr>
+<tr>
+    <td>Authenticate and authorise existing user's login details
+    <td>/login
+    <td>POST
+    <td>A JSON object holding data required by the user to login: { Username: "Kim", Password: "kim_012"}
+    <td>A JSON object holding data about the user that has logged in, including a JWT token issued by the server: {{ id: 145436546456, Username: "Kim",
+    Password: "kim_012", Email: "kim@mail.com", Birthday: "2001-02-12", favoriteMovies: [] }, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ5NzEyZDZhMTA3NGNkNTA3YWU3NzEiLCJVc2VybmFtZSI6Im5ld3VzZXIiLCJQYXNzd29yZCI6IiQyYiQxMCR6anRwUEU1ZDZaSlRDeGN1cnFlbW51Qi9wemlsV055NDVMdEp0MEUwLkNJR0RqOGpvUXVERyIsIkVtYWlsIjoibnVAbWFpbC5jb20iLCJCaXJ0aGRheSI6IjE5OTgtMDctMTJUMDA6MDA6MDAuMDAwWiIsIkZhdm9yaXRlTW92aWVzIjpbXSwiX192IjowLCJpYXQiOjE2ODI1OTk2ODksImV4cCI6MTY4MzIwNDQ4OSwic3ViIjoibmV3dXNlciJ9.bcMDJrq3XtGDUk1VYH1cF10SoRvq0g6jTUM37h4CJqg}
+</tr>
 </tbody>
 
 
