@@ -6,8 +6,11 @@ body{
 }
 thead {
     background: Pink;
-    text-align: center;
+    text-align: left;
 }
-th {background: HotPink;}
+th {
+    background: HotPink;
+    text-align: left;
+}
 table { width:1200px;border:5px solid Black;}
 td,th { border:1px solid Black;}
